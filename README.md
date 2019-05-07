@@ -1,4 +1,6 @@
 # ChatRobot
+## Raw repo: https://github.com/shen1994/ChatRobot
+## Change some code so it can run in keras 2.
 
 ## 0. 特别提醒  
 > * 关于keras环境下seq2seq错误修改  
