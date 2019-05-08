@@ -12,6 +12,7 @@ from data_process import DataProcess
 from test import load_model
 from test import data_to_padding_ids
 
+
 def generate_real_embedding(text_list):
     data_process = DataProcess(use_word2cut=True)
     dec_vocab = data_process.read_vocabulary(data_process.dec_vocab_file)

@@ -15,6 +15,7 @@ from keras.models import Sequential
 from seq2seq import AttentionSeq2Seq
 from data_process import DataProcess
 
+
 def get_encoder_embedding():
     
     embedding_list = []
@@ -31,6 +32,7 @@ def get_encoder_embedding():
             embedding_list.append(vec_model.wv[value])
     
     return np.array(embedding_list)
+
 
 def build_model(training=True):
     
@@ -69,4 +71,3 @@ def build_model(training=True):
     model.compile(loss='mse', optimizer='adam', metrics=['accuracy'])
     
     return model
-    

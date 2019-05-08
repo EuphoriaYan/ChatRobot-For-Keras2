@@ -10,6 +10,7 @@ import codecs
 
 from word2cut import WordCut
 
+
 class DataProcess:
     __PAD__ = 0
     __UNK__ = 1
@@ -212,8 +213,8 @@ class DataProcess:
                                  self.enc_ids_padding_file, self.dec_ids_padding_file, \
                                  self.enc_input_length, self.dec_output_length)
         print(u"数据预处理完成" + "---OK")
-        
+
+
 if __name__ == "__main__":
     data_process = DataProcess()
     data_process.run()
-        

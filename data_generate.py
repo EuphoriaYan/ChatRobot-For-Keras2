@@ -11,11 +11,11 @@ import numpy as np
 
 from data_process import DataProcess
 
+
 def generate_batch(batch_size=None):
         
     data_process = DataProcess(use_word2cut=False)
-    
-    
+
     dec_reverse_vec = data_process.read_reverse_vocabulary(data_process.dec_vocab_file)
     decoder_word2vec_model = gensim.models.Word2Vec.load(r'model/decoder_vector.m')
     dec_useful_words = list(decoder_word2vec_model.wv.vocab.keys())
