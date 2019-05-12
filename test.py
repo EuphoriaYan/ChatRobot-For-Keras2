@@ -11,6 +11,7 @@ import numpy as np
 from encoder2decoder import build_model
 from data_process import DataProcess
 
+
 def data_to_padding_ids(text_list):
     
     data_process = DataProcess(use_word2cut=True)

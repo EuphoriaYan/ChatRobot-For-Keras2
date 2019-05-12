@@ -12,8 +12,9 @@ from encoder2decoder import build_model
 from test import data_to_padding_ids
 from test import predict_text
 
+
 def run():
-    batch_size = 63
+    batch_size = 64
     epochs = 5000
     
     data_process = DataProcess(use_word2cut=False)
@@ -31,8 +32,7 @@ def run():
                         epochs=epochs, verbose=1, workers=1)
 
     model.save_weights("model/seq2seq_model_weights.h5", overwrite=True)
-    
+
+
 if __name__ == "__main__":
     run()
-    
-    

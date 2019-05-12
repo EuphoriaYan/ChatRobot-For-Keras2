@@ -34,6 +34,7 @@ def clean_repeat_words(words):
 
     return new_words
 
+
 def assembly_word(words):
     
     default_answer = u"小哥哥，对不起呢，我不知道。"
@@ -76,9 +77,10 @@ def assembly_word(words):
     
     return text
 
+
 def run():
 
-    questions = [u"我喜欢你？", u"品尝大董意境菜时兴奋不已，并起身激情拥抱"]
+    questions = [u"我喜欢你？", u"品尝大董意境菜时兴奋不已，并起身激情拥抱", u""]
 
     model = load_model("model/seq2seq_model_weights.h5")
 
