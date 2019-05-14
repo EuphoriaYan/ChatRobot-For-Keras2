@@ -61,7 +61,8 @@ def generate_real_embedding(text_list):
         all_dec_embedding.append(dec_embedding)
     
     return np.array(all_dec_embedding)
-    
+
+
 def run():
     questions = [u"我真的好喜欢你，你认为呢？", u"品尝大董意境菜时兴奋不已，并起身激情拥抱"]
     answers = [u"我也非常喜欢你。", "这个瞬间捕捉得很妙啊。"]
@@ -79,6 +80,7 @@ def run():
         average_mse_list.append(average_mse)
     
     print("score: " + str(average_mse_list) + " ---> 0")         
-    
+
+
 if __name__ == "__main__":
     run()
