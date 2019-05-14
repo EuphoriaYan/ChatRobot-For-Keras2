@@ -14,7 +14,7 @@ from test import predict_text
 
 
 def run():
-    batch_size = 64
+    batch_size = 32
     epochs = 5000
     
     data_process = DataProcess(use_word2cut=False)

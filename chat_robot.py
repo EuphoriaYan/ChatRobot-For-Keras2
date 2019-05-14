@@ -80,7 +80,11 @@ def assembly_word(words):
 
 def run():
 
-    questions = [u"我喜欢你？", u"品尝大董意境菜时兴奋不已，并起身激情拥抱", u""]
+    questions = [u"我真的好喜欢你，你认为呢？",
+                 u"品尝大董意境菜时兴奋不已，并起身激情拥抱",
+                 u"生日快乐，兄弟",
+                 u"某人今天太有成就感了！"
+                 ]
 
     model = load_model("model/seq2seq_model_weights.h5")
 
