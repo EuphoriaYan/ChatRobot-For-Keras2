@@ -89,7 +89,7 @@ class DataProcess:
             for w in vocab_list:
                 f.write(w + "\t" + str(counter) + "\n")
                 counter += 1
-                
+
     def read_vocabulary(self, vocabulary_path):
         vocab = dict()
         with codecs.open(vocabulary_path, "r", "utf-8") as f:
@@ -100,7 +100,7 @@ class DataProcess:
                 line=f.readline()
                 
         return vocab
-        
+
     def read_reverse_vocabulary(self, vocabulary_path):
         vocab = dict()
         with codecs.open(vocabulary_path, "r", "utf-8") as f:
@@ -113,12 +113,12 @@ class DataProcess:
         reverse_dict = dict(zip(vocab.values(), vocab.keys())) 
         
         return reverse_dict
-                
+
     def sentence_to_ids(self, sentence, vocabulary):
         words = self.text_cut_object.cut([sentence.strip()])
         words_list = words[0].strip().split()
         return [vocabulary.get(word, self.__UNK__) for word in words_list]
-                
+
     def data_to_ids(self, data_path, target_path, vocabulary):
         target_writer = codecs.open(target_path, "w", "utf-8")
         with codecs.open(data_path, "r", "utf-8") as f:

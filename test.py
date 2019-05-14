@@ -38,7 +38,8 @@ def data_to_padding_ids(text_list):
         enc_padding_ids_list.append(np.array(enc_padding_ids))
     
     return np.array(enc_padding_ids_list)
-    
+
+
 def calculate_mse(src_vec, des_vec):
     data_process = DataProcess(use_word2cut=False)
     
@@ -52,7 +53,8 @@ def calculate_mse(src_vec, des_vec):
     mse = np.sum(err)
     
     return mse
-    
+
+
 def predict_text(model, enc_embedding):
     
     data_process = DataProcess(use_word2cut=False)
@@ -81,7 +83,8 @@ def predict_text(model, enc_embedding):
         prediction_words_list.append(prediction_words)
         
     return prediction_words_list
-    
+
+
 def load_model(model_path):
     
     model = build_model(training=False)
@@ -89,7 +92,8 @@ def load_model(model_path):
     model.load_weights(model_path)
     
     return model
-    
+
+
 def common_prediction(model, text):
 
     padding_ids = data_to_padding_ids(text)
@@ -97,6 +101,7 @@ def common_prediction(model, text):
     words = predict_text(model, padding_ids)
     
     return words
+
 
 def run():
     
@@ -107,7 +112,7 @@ def run():
     prediction_words = common_prediction(model, text)
     
     print(prediction_words)
-    
+
+
 if __name__ == "__main__":
     run()
-    
