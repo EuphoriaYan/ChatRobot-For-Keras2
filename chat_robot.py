@@ -9,6 +9,7 @@ from data_process import DataProcess
 from test import load_model
 from test import common_prediction
 
+
 def clean_repeat_words(words):
     
     data_process = DataProcess(use_word2cut=False)
