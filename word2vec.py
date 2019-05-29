@@ -14,7 +14,7 @@ from data_process import DataProcess
 class Sentences:
     
     corpus_path = "corpus"
-    
+
     def __init__(self, mode=0):
         self.mode = mode
         data_process = DataProcess()
@@ -49,6 +49,7 @@ class Sentences:
                 
                 yield words_list
                 line = f.readline()
+
 
 if __name__ == "__main__":
     

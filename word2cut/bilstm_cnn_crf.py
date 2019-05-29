@@ -56,7 +56,7 @@ def bilstm_cnn_crf(maxlen, useful_word_len, class_label_count, embedding_size, e
     crf = CRF(class_label_count, sparse_target=False)
     crf_output = crf(dense)
         
-    # mdoel
+    # model
     model = Model(input=[word_input], output=crf_output)
     model.compile(loss=crf.loss_function, optimizer="adam", metrics=[crf.accuracy])
         
