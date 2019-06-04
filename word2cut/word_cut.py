@@ -72,7 +72,7 @@ class WordCut:
         sequence_max_length, embedding_size, \
         useful_word_length, label_2_index_length = pickle.load(open(model_path + 'model/model_params.pkl','rb'))
         
-        model = bilstm_cnn_crf(sequence_max_length, useful_word_length,\
+        model = bilstm_cnn_crf(sequence_max_length, useful_word_length,
                                label_2_index_length, embedding_size, is_train=False)
         
         model.load_weights(model_path + 'model/train_model.hdf5')
